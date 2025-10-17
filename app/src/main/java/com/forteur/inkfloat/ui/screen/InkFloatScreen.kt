@@ -38,7 +38,7 @@ fun InkFloatScreen(
             .padding(horizontal = 16.dp, vertical = 24.dp)
     ) {
         Text(
-            text = "InkFloat",
+            text = ".:InkFloat:.",
             style = MaterialTheme.typography.headlineMedium,
             color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.fillMaxWidth(),
@@ -91,7 +91,8 @@ fun InkFloatScreen(
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "All drawings stay local to this device.",
+            text = "All drawings stay local to this device." +
+                    "\n This app serves no purpose other than trying out different ways to translate calligraphy to a digital medium.",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.fillMaxWidth(),

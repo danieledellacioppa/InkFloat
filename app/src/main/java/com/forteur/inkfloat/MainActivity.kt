@@ -1,6 +1,7 @@
 package com.forteur.inkfloat
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -46,6 +47,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.forteur.inkfloat.model.Stroke
 import com.forteur.inkfloat.ui.theme.InkFloatTheme
 
 class MainActivity : ComponentActivity() {
@@ -64,12 +66,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-data class Stroke(
-    val color: Color,
-    val strokeWidthPx: Float,
-    val points: SnapshotStateList<Offset> = mutableStateListOf()
-)
 
 @Composable
 fun InkFloatScreen(modifier: Modifier = Modifier) {
@@ -117,6 +113,7 @@ fun InkFloatScreen(modifier: Modifier = Modifier) {
             onUndo = {
                 if (strokes.isNotEmpty()) {
                     strokes.removeAt(strokes.lastIndex)
+                    Log.d("InkFloatScreen", "Undo last stroke, remaining strokes: ${strokes.size}")
                 }
             },
             onClear = { strokes.clear() },

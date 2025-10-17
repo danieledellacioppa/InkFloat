@@ -14,7 +14,7 @@ A lightweight, offline whiteboard for Android tablets and panels.
 - Handwriting-to-text conversion for notes while keeping resource use low
 
 ## Target use case
-Built for classrooms and collaborative school environments such as those across Bournemouth, where simple annotation tools are essential.
+Built for classrooms and collaborative school environments where simple annotation tools are essential.
 
 ## License
 MIT
